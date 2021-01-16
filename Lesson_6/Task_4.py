@@ -33,11 +33,11 @@ class TownCar(Car):
 
 class SportCar(Car):
     """Добавил спорт-режим к этому клссу"""
-    def sport_mode_on(self):
-        print('Switched to sport mode!')
-
-    def sport_mode_off(self):
-        print('Switched to town mode!')
+    def sport_mode(self, on_off):
+        if on_off == 'on':
+            print('Switched to sport mode!')
+        elif on_off == 'off':
+            print('Switched to town mode!')
 
 
 class WorkCar(Car):
@@ -51,11 +51,11 @@ class WorkCar(Car):
 
 class PoliceCar(Car):
     """Добавил включение и выключение сирен"""
-    def turn_on_the_siren(self):
-        print('Siren is on')
-
-    def turn_off_the_siren(self):
-        print('Siren is off')
+    def turn_the_siren(self, on_off):
+        if on_off == 'on':
+            print('The siren is on!')
+        elif on_off == 'off':
+            print('The siren is off!')
 
 
 town_car_1 = TownCar(70, 'Black', 'Seat', True)
